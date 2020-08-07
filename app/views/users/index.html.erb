@@ -1,4 +1,4 @@
-<h1 class="text-center mt-4">Alpha Bloggers</h1>
+<h1 class="text-center mt-4">Check out some other Lyricists</h1>
 
 <div class="flickr_pagination">
     <%= will_paginate @users, :container => false %>
@@ -19,8 +19,14 @@
                         </h5>
                         <p class="card-text"><%= pluralize(user.articles.count, "article")%></p>
                         <%= link_to "View profile", user, class: "btn btn-outline-success" %>
-                        <% if logged_in? and user == current_user %>
-                            <%= link_to "Editprofile", edit_user_path(user), class: "btn btn-outline-info" %>
+                        <% if logged_in? %>
+                            <% if user == current_user %>
+                                <%= link_to "Editprofile", edit_user_path(user), class: "btn btn-outline-info" %>
+                            <% end %>
+                            <% if current_user.admin? %>
+                                <%= link_to "Delete user", user_path(user), class: "btn btn-outline-danger", method: :delete,
+                                data: {confirm: "Are you sure you want to delete the user account and all associated articles?"} %>
+                            <% end %>
                         <% end %>
                         </div>
                     <div class="card-footer text-muted">
