@@ -1,11 +1,11 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 .navbar {
-    background-color: #000 !important;
+    background-color: #8EE4AF !important;
 }
     
 .nav-link{
-    color: #FFF !important;
+    color: rgb(0, 0, 0) !important;
 }
 
 #logo {
@@ -21,13 +21,23 @@
     color: #fff;
     text-decoration: none;
   }
+
+  .formbg{
+    background-color: #ED5F51 !important;
+  }
   
   #home-container{
       margin-top: 25px;
   }
 
+  .hometext{
+    font-family: "Lucida Console", Courier, monospace;
+  }
+
   .jumbotron{
-      background-image: asset-url('mountains.jpg');
+    margin-top: 150px;
+      background-color: #ED5F51;
+      // background-image: asset-url('mountains.jpg');
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -45,7 +55,7 @@
 
   #page-content{
       flex: 1 0 auto;
-      background-color: lightgrey;
+      background-color: #EDF5E1;
   }
 
   #sticky-footer{
@@ -69,11 +79,11 @@
       color: #ff0084; }
     .flickr_pagination a {
       border: 1px whitesmoke;
-      color: whitesmoke;
+      color: #05386B;
       text-decoration: none; }
       .flickr_pagination a:hover, .flickr_pagination a:focus {
         border-color: gray;
-        background: whitesmoke;
+        background: #05386B;
         color: gray; }
     .flickr_pagination .page_info {
       color: #aaaaaa;
